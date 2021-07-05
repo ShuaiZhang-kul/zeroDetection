@@ -1,10 +1,16 @@
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Detection {
     public static void main(String[] args) throws IOException {
-        File file = new File("C:\\Users\\shuai\\Desktop\\outputfile4600-5260");//文件路径
+        System.out.println("Please type in your file path and press enter：");
+
+        Scanner in = new Scanner(System.in);
+        String filePath=in.next();
+
+        File file = new File(filePath);//文件路径
         FileReader fileReader = new FileReader(file);
         LineNumberReader reader = new LineNumberReader(fileReader);
         String txt = "initial";
